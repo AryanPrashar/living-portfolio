@@ -10,16 +10,10 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Subtle adaptive ambient layer (System A) -->
   <div class="ambient-backdrop" aria-hidden="true"></div>
 
-  <!-- =======================================================================
-       HEADER (Sticky across scroll; mirrors wireframe: Name + Live Switch |
-       Redirects | Links to Work)
-       ======================================================================= -->
   <header class="site-header" id="site-header">
     <div class="header-inner">
-      <!-- Left: Name + Live Mode Switch -->
       <div class="header-brand-group">
         <a href="#home" class="wire-pill brand-name-box" id="header-name-link">Your Name</a>
         <button
@@ -35,7 +29,6 @@
         </button>
       </div>
 
-      <!-- Mobile menu button (shown on small screens) -->
       <button
         type="button"
         class="mobile-nav-toggle"
@@ -49,7 +42,6 @@
         <span class="hamburger-bar"></span>
       </button>
 
-      <!-- Center: Redirects -->
       <nav class="primary-nav" id="primary-nav" aria-label="Primary Navigation">
         <ul class="nav-list">
           <li><a href="#home" class="nav-link" data-nav="home">Home</a></li>
@@ -61,7 +53,6 @@
         </ul>
       </nav>
 
-      <!-- Right: Links to Work (Email, LinkedIn, GitHub) -->
       <div class="header-work-links" aria-label="Links to Work">
         <a href="mailto:hello@example.com" class="icon-link" id="header-email-link" aria-label="Email me" title="Email">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -83,7 +74,6 @@
     </div>
   </header>
 
-  <!-- Adaptive Suggestion Banner (User-controlled adaptation — System B) -->
   <aside class="adaptation-banner" id="adaptation-banner" aria-live="polite" hidden>
     <div class="adaptation-banner-content">
       <div class="adaptation-banner-text">
@@ -97,18 +87,14 @@
     </div>
   </aside>
 
-  <!-- Status Toast (for feedback on resets, copies, preference prompts) -->
   <div class="status-toast" id="status-toast" role="status" aria-live="polite" hidden></div>
 
-  <!-- =======================================================================
-       MAIN CONTENT
-       ======================================================================= -->
+
+
   <main id="main-content" class="portfolio-main">
 
-    <!-- 1. HERO SECTION (Interactive Portrait + Title + Bio + Say Hi) -->
     <section id="home" class="portfolio-section hero-section" aria-labelledby="hero-title">
       <div class="section-container hero-grid">
-        <!-- Left: Interactive Portrait -->
         <div class="hero-portrait-col">
           <div class="wire-frame portrait-frame" id="interactive-portrait-frame">
             <canvas id="interactive-portrait-canvas" aria-label="Interactive generative portrait responding to exploration"></canvas>
@@ -119,7 +105,6 @@
           </div>
         </div>
 
-        <!-- Right: Title, Bio, Say Hi -->
         <div class="hero-info-col">
           <div class="wire-box section-title-box hero-title-box">
             <h1 id="hero-title">The Living Portfolio</h1>
@@ -149,7 +134,6 @@
             </a>
           </div>
 
-          <!-- Adaptive Telemetry Micro-strip -->
           <div class="adaptive-telemetry-bar" id="adaptive-telemetry-bar">
             <span>Theme: <strong id="telemetry-theme">neutral</strong></span>
             <span>Layout: <strong id="telemetry-layout">editorial</strong></span>
@@ -160,7 +144,6 @@
       </div>
     </section>
 
-    <!-- 2. ABOUT ME SECTION -->
     <section id="about" class="portfolio-section about-section" aria-labelledby="about-title">
       <div class="section-container about-grid">
         <div class="about-text-col">
@@ -174,23 +157,18 @@
 
         <div class="about-photo-col">
           <div class="wire-frame about-photo-frame" id="about-photo-slot">
-            <!-- Populated dynamically from PORTFOLIO_DATA.about.photoUrl or crisp placeholder -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 3. EXPERIENCE SECTION (Photo Vertical Carousel + Job Title + Description + Vertical Rail) -->
     <section id="experience" class="portfolio-section experience-section" aria-labelledby="experience-title">
       <div class="section-container experience-grid">
-        <!-- Left: Photo Vertical Carousel -->
         <div class="exp-photo-col">
           <div class="wire-frame exp-photo-frame" id="exp-photo-carousel" aria-live="polite">
-            <!-- Dynamically updated with active experience photo/placeholder -->
           </div>
         </div>
 
-        <!-- Right: Title + Job Title + Description + Vertical Job Track -->
         <div class="exp-content-col">
           <div class="exp-header-align">
             <div class="wire-box section-title-box">
@@ -209,13 +187,11 @@
               <ul class="tag-list" id="exp-highlights-list"></ul>
             </div>
 
-            <!-- Vertical Carousel Rail (Job 1, Job 2, Job 3...) -->
             <div class="exp-rail-wrapper" aria-label="Experience timeline">
               <div class="exp-rail-track" aria-hidden="true">
                 <div class="exp-rail-indicator" id="exp-rail-indicator"></div>
               </div>
               <div class="exp-rail-tabs" id="exp-rail-tabs" role="tablist" aria-orientation="vertical">
-                <!-- Dynamically generated Job 1, Job 2, Job 3 buttons -->
               </div>
             </div>
           </div>
@@ -223,7 +199,6 @@
       </div>
     </section>
 
-    <!-- 4. SOFTWARE SECTION (Title + View All + Horizontal Carousel + Project Cards Grid) -->
     <section id="software" class="portfolio-section software-section" aria-labelledby="software-title">
       <div class="section-container">
         <div class="section-header-row">
@@ -237,7 +212,6 @@
           </div>
         </div>
 
-        <!-- Horizontal Carousel -->
         <div class="software-carousel-wrapper" id="software-carousel-wrapper">
           <div class="wire-frame software-carousel-stage" id="software-carousel-stage" tabindex="0" aria-roledescription="carousel" aria-label="Featured software projects">
             <button type="button" class="carousel-arrow carousel-arrow-prev" id="software-prev-btn" aria-label="Previous software project">
@@ -245,7 +219,6 @@
             </button>
 
             <div class="carousel-viewport" id="software-carousel-viewport">
-              <!-- Active featured slide or empty state rendered here -->
             </div>
 
             <button type="button" class="carousel-arrow carousel-arrow-next" id="software-next-btn" aria-label="Next software project">
@@ -254,18 +227,14 @@
           </div>
 
           <div class="carousel-dots" id="software-carousel-dots" role="tablist" aria-label="Software slides">
-            <!-- Dynamically populated dashes -->
           </div>
         </div>
 
-        <!-- Dynamic Software Cards Grid (0 -> 1 -> 2 -> 3 -> N) -->
         <div class="projects-grid" id="software-cards-grid">
-          <!-- Dynamically populated or empty state -->
         </div>
       </div>
     </section>
 
-    <!-- 5. HARDWARE SECTION (Title + Dynamic 3-column Hardware Cards Grid) -->
     <section id="hardware" class="portfolio-section hardware-section" aria-labelledby="hardware-title">
       <div class="section-container">
         <div class="section-header-row">
@@ -275,12 +244,10 @@
         </div>
 
         <div class="projects-grid hardware-grid" id="hardware-cards-grid">
-          <!-- Dynamically populated or empty state -->
         </div>
       </div>
     </section>
 
-    <!-- 6. ART SECTION (Title + 3 Invisible Dividers Auto-Resizing Masonry) -->
     <section id="art" class="portfolio-section art-section" aria-labelledby="art-title">
       <div class="section-container">
         <div class="section-header-row">
@@ -291,16 +258,12 @@
         </div>
 
         <div class="art-masonry" id="art-masonry-grid">
-          <!-- 3 invisible divider columns on desktop, 2 on iPad, 1 on phone -->
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- =======================================================================
-       FOOTER
-       ======================================================================= -->
   <footer class="site-footer">
     <div class="section-container footer-inner">
       <div class="footer-left">
@@ -318,12 +281,7 @@
     </div>
   </footer>
 
-  <!-- =======================================================================
-       BOTTOM-RIGHT FLOATING CONTROLS (Matches wireframe: Reset circle +
-       Pencil circle that expands horizontally into the dark Input pill)
-       ======================================================================= -->
   <div class="floating-controls" id="floating-controls" aria-label="Adaptive customization controls">
-    <!-- Reset Button (Top Orange Circle) -->
     <button
       type="button"
       class="fab-circle fab-reset"
@@ -337,7 +295,6 @@
       </svg>
     </button>
 
-    <!-- Expandable Dark Pill + Pencil Button (Bottom Orange Circle) -->
     <div class="fab-input-row" id="fab-input-row">
       <form class="preference-pill" id="preference-form" autocomplete="off">
         <label for="preference-input" class="sr-only">Describe how you want the portfolio to look or what you want to focus on</label>
@@ -365,7 +322,6 @@
         </button>
       </form>
 
-      <!-- Quick suggestion chips shown when input pill is expanded -->
       <div class="preference-presets" id="preference-presets" hidden>
         <button type="button" class="preset-chip" data-prompt="Show engineering and code architecture in a dark futuristic lab">Engineering Lab</button>
         <button type="button" class="preset-chip" data-prompt="Immersive visual gallery">Visual Gallery</button>
@@ -375,10 +331,6 @@
     </div>
   </div>
 
-  <!-- =======================================================================
-       MODALS & DRAWERS
-       ======================================================================= -->
-  <!-- 1. Project / Demo / All-Projects Modal -->
   <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" hidden>
     <div class="modal-card modal-card-wide">
       <div class="modal-header">
@@ -389,7 +341,6 @@
     </div>
   </div>
 
-  <!-- 2. Art Lightbox Modal -->
   <div class="modal-backdrop" id="lightbox-modal" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
     <div class="modal-card modal-card-wide">
       <div class="modal-header">
@@ -400,7 +351,6 @@
     </div>
   </div>
 
-  <!-- 3. Adaptive Transparency & Behavioral Memory Modal -->
   <div class="modal-backdrop" id="transparency-modal" role="dialog" aria-modal="true" aria-labelledby="transparency-title" hidden>
     <div class="modal-card">
       <div class="modal-header">
@@ -411,7 +361,6 @@
     </div>
   </div>
 
-  <!-- 4. Portfolio Studio Drawer (Efficiently Add / Test / Export Items) -->
   <div class="modal-backdrop" id="studio-modal" role="dialog" aria-modal="true" aria-labelledby="studio-title" hidden>
     <div class="modal-card modal-card-wide">
       <div class="modal-header">

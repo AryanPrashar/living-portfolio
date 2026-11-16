@@ -1,22 +1,3 @@
-/**
- * ============================================================================
- * THE LIVING PORTFOLIO — DATA REGISTRY (data.js)
- * ============================================================================
- * Software, Hardware, and Art all start empty ([]) by design.
- *
- * HOW TO ADD ITEMS PERMANENTLY:
- * Option A: Add objects directly into PORTFOLIO_DATA.software / .hardware / .art
- *           below, OR call the helper functions at the bottom of this file:
- *           - addSoftwareProject({ ... })
- *           - addHardwareProject({ ... })
- *           - addArtwork({ ... })
- *
- * Option B: Use the in-page "Portfolio Studio" (footer link or Ctrl+Shift+E)
- *           to add items visually, upload local images, test responsiveness,
- *           and click "Export data.js" to copy your updated file.
- * ============================================================================
- */
-
 const PORTFOLIO_DATA = {
   profile: {
     name: "Your Name",
@@ -92,60 +73,13 @@ const PORTFOLIO_DATA = {
     }
   ],
 
-  /**
-   * SOFTWARE PROJECTS — Starts empty ([])
-   * Template:
-   * {
-   *   id: "sw-1",
-   *   title: "Project Title",
-   *   descriptionConcise: "Short summary shown in concise mode.",
-   *   descriptionDetailed: "In-depth technical & design summary shown in detailed mode.",
-   *   architectureNotes: "Key algorithms, state management, or performance notes.",
-   *   techStack: ["HTML", "CSS", "JavaScript"],
-   *   imageUrl: "", // Optional image path or URL
-   *   githubUrl: "https://github.com/username/repo",
-   *   liveDemoUrl: "", // Optional live demo link
-   *   interactivePreview: true // Enables interactive mini-sandbox modal
-   * }
-   */
   software: [],
 
-  /**
-   * HARDWARE PROJECTS — Starts empty ([])
-   * Template:
-   * {
-   *   id: "hw-1",
-   *   title: "Hardware Build Title",
-   *   descriptionConcise: "Brief build overview & purpose.",
-   *   descriptionDetailed: "Detailed schematic, microcontroller, and fabrication notes.",
-   *   specs: ["ESP32-S3", "KiCad PCB", "3D Printed Enclosure"],
-   *   imageUrl: "", // Optional image path or URL
-   *   githubUrl: "https://github.com/username/hardware-repo"
-   * }
-   */
   hardware: [],
 
-  /**
-   * ARTWORKS — Starts empty ([])
-   * Automatically distributes & resizes across 3 invisible divider columns on desktop
-   * (2 columns on iPad, 1 column on phone) with every added piece.
-   * Template:
-   * {
-   *   id: "art-1",
-   *   title: "Artwork Title",
-   *   medium: "Generative / Ink / Digital",
-   *   year: "2026",
-   *   aspectRatio: "4 / 5", // e.g. "1 / 1", "4 / 5", "16 / 10", "3 / 4"
-   *   imageUrl: "", // Image path or URL
-   *   notes: "Optional artist note"
-   * }
-   */
   art: []
 };
 
-/* --------------------------------------------------------------------------
- * CONVENIENCE HELPER FUNCTIONS FOR ADDING ITEMS IN CODE
- * -------------------------------------------------------------------------- */
 function addSoftwareProject(item) {
   PORTFOLIO_DATA.software.push({
     id: item.id || `sw-${PORTFOLIO_DATA.software.length + 1}`,
