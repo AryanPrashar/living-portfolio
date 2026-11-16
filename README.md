@@ -15,3 +15,6 @@ Before touching any code, I created a full fledged website layout establishing t
 6. **Arts and Creative Code**: A layout built around **3 invisible dividers** engineered to auto-distribute and resize dynamically across desktop, tablet, and mobile with zero layout shift.
 7. **Persistent Adaptive HUD (bottom right)**: A floating **Reset button** (top orange circle) to restore neutral defaults at any time and a expandable **Pencil Button** that slides out horizontally for natural-language customization requests (ex. *"Make this feel like a futuristic design lab, but show me the programming side"*)
 
+<img width="1366" height="6433" alt="Add a heading" src="https://github.com/user-attachments/assets/69a6263a-41a3-45c2-8de8-9ad542a4453e" />
+
+
